@@ -13,7 +13,7 @@ header {
 }
 .logo{
     font-size: 40px;
-    font-weight: 100;
+    font-weight: 600;
     margin-left: 10px;
     padding: 10px 40px;
 }
@@ -23,7 +23,7 @@ nav li{
     margin-right: 20px;
 }
 
-nav li:hover {
+nav li:active {
     transform: scale(0.8);
 }
 
@@ -56,7 +56,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 130px 0px;
+    padding: 110px 0px 150px 0px;
     height: 100%;
     width: 100%;
 }
@@ -68,14 +68,26 @@ main {
 footer {
     width:100%;
     height: 100%;
-    text-align: center;
     background-color: blue;
     color: white;
+}
+
+.p-f {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-@media screen and (max-width: 786){
-    
+@media screen and (max-width: 670px){
+    main {
+        flex-direction: column;
+    }
+    .img-profile {
+        margin-right: 0;
+        border-radius: 20px;
+    }
+    .paragraf {
+        text-align: center;
+    }
 }
+
