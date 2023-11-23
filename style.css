@@ -2,14 +2,16 @@ body {
     font-family: 'Quicksand', sans-serif ;
     margin: 0;
     padding: 0;
+    background-image: var(--gradiasi);
 }
 header {
-    background-color: rgba(240, 252, 5, 0.8);
+    background-color: rgb(240, 252, 5);
     width: 100%;
-    height: 100%;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
 }
 .logo{
     font-size: 40px;
@@ -19,7 +21,7 @@ header {
 }
 nav li{
     list-style: none;
-    float: left;
+    display: inline;
     margin-right: 20px;
 }
 
@@ -48,46 +50,181 @@ nav li > a:active {
     border-radius: 10px;
 }
 :root {
-    --gradient : linear-gradient(102.4deg, rgba(254, 2, 2, 0.8) 7.8%, rgba(254, 57, 2, 0.8) 50.8%,
-    rgba(255, 106, 7, 0.8) 100.3%);
+    --gradiasi : linear-gradient(102.4deg, rgba(254, 2, 2, 0.8) 7.8%, rgba(255, 68, 0, 0.8) 50.8%,
+    rgba(255, 106, 7, 0.8) 100.3%)
 }
+
 main {
-    background-image: var(--gradient);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 110px 0px 150px 0px;
     height: 100%;
     width: 100%;
 }
+
+main:hover {
+    background-image: var();
+}
+
+#Home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 180px 0px 100px 0px;
+    font-size:x-large;
+}
+
+.fa-laptop-code {
+    margin-right: 40px;
+}
+
 .img-profile {
     border-radius: 15px 50px 30px;
     width: 300px;
     margin-right: 40px;
 } 
-footer {
+
+#About {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 0px 150px 0px;
+    font-size: larger;
+}
+
+#Contact {
     width:100%;
     height: 100%;
     background-color: blue;
     color: white;
+    display: flex;
+    flex-direction: column;
 }
 
-.p-f {
+#Contact > .h2-f, .p1-f {
+    padding-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 0px;
+}
+
+.p1-f {
+    text-align: left;
     display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+#Contact > .p-f {
+    text-align: center;
+}
+.about-main {
+    display: flex;
+}
+
+.about-paragraf1{
+    margin-right: 40px;
 }
 
 @media screen and (max-width: 670px){
-    main {
+    #Home {
         flex-direction: column;
     }
     .img-profile {
-        margin-right: 0;
         border-radius: 20px;
+    }
+    .img-profile,.about-paragraf1{
+        margin-right: 0;
     }
     .paragraf {
         text-align: center;
     }
+    header {
+        border-radius:0px ;
+    }
+    .fa-laptop-code {
+        margin-right: 0px;
+    }
+    .about-main {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.navbar .toggler-navbar {
+    padding: 100px;
+}
+.sidebar {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background: rgb(255, 216, 43);
+    text-align: right;
+    font-size: 20px;
+    transform: rotate3d(0, 1, 0, 90deg);
+    transform-origin: left center;
+    transition: .5s;
+}
+
+.sidebar.open {
+    transform: rotate3d(0, 0, 1, 0deg);
+}
+.sidebar ul{
+    list-style: none;
+}
+
+.sidebar li:hover{
+    background: #0000003f;
+}
+
+.sidebar li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block
+}
+.hamburger-menu {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.hamburger-menu span:nth-child(1) {
+    top: 2.5px;
+}
+
+.hamburger-menu span:nth-child(2) {
+    top: 11px;
+}
+
+.hamburger-menu span:nth-child(3) {
+    top: 21px;
+}
+
+.hamburger-menu.open span:nth-child(1) {
+    top: 15px;
+    transform: rotate(135deg);
+}
+
+.hamburger-menu.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+.hamburger-menu.open span:nth-child(3) {
+    top: 14px;
+    transform: rotate(-135deg);
 }
 
