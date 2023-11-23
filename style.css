@@ -5,7 +5,7 @@ body {
     background-image: var(--gradiasi);
 }
 header {
-    background-color: rgb(240, 252, 5);
+    background: rgb(255, 216, 43);
     width: 100%;
     height: 70px;
     display: flex;
@@ -19,34 +19,30 @@ header {
     margin-left: 10px;
     padding: 10px 40px;
 }
-nav li{
+.navbar1 li{
     list-style: none;
     display: inline;
     margin-right: 20px;
 }
 
-nav li:active {
+.navbar1 li:active {
     transform: scale(0.8);
 }
 
-nav li > a {
+.navbar1 li > a {
     color: black;
     text-decoration: none;
     padding: 10px 30px;
 }
 
-nav li > a:hover {
-    background-color: rgb(0, 34, 255);
-    color: aliceblue;
+.navbar1 li > a:hover {
+    background-color: #ffffff2d;
     border-radius: 10px;
-    font-weight: bold;
     transition: .5s ease-out;
 }
 
-nav li > a:active {
-    background-color: rgb(0, 229, 255);
-    color: black;
-    font-weight: bold;
+.navbar1 li > a:active {
+    background-color: rgba(255, 247, 0, 0.334);
     border-radius: 10px;
 }
 :root {
@@ -57,10 +53,6 @@ nav li > a:active {
 main {
     height: 100%;
     width: 100%;
-}
-
-main:hover {
-    background-image: var();
 }
 
 #Home {
@@ -144,6 +136,14 @@ main:hover {
         flex-direction: column;
         text-align: center;
     }
+    .navbar1 {
+        display: none;
+    }
+}
+@media screen and (min-width: 670px) {
+    .navbar, .sidebar{
+        display: none;
+    }
 }
 .navbar .toggler-navbar {
     padding: 100px;
@@ -152,7 +152,7 @@ main:hover {
     position: fixed;
     top: 70px;
     left: 0;
-    width: 200px;
+    width: 180px;
     height: 100%;
     background: rgb(255, 216, 43);
     text-align: right;
@@ -170,11 +170,15 @@ main:hover {
 }
 
 .sidebar li:hover{
-    background: #0000003f;
+    background: #ffffff2d;
+}
+
+.sidebar li:active{
+    background: rgba(255, 247, 0, 0.334);
 }
 
 .sidebar li a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     padding: 10px 15px;
     display: block
@@ -193,7 +197,7 @@ main:hover {
     position: absolute;
     height: 3px;
     width: 100%;
-    background: white;
+    background: rgb(13, 13, 13);
     border-radius: 9px;
     opacity: 1;
     left: 0;
