@@ -14,7 +14,7 @@ header {
     position: fixed;
 }
 .logo{
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
     margin-left: 10px;
     padding: 10px 40px;
@@ -105,7 +105,7 @@ main {
 #Contact > .p-f {
     text-align: center;
 }
-.about-main {
+.about-main, .about-paragraf{
     display: flex;
 }
 
@@ -113,34 +113,51 @@ main {
     margin-right: 40px;
 }
 
-@media screen and (max-width: 670px){
-    #Home {
-        flex-direction: column;
-    }
+
+@media screen and (max-width: 730px){
     .img-profile {
         border-radius: 20px;
     }
-    .img-profile,.about-paragraf1{
+    .img-profile{
         margin-right: 0;
-    }
-    .paragraf {
         text-align: center;
     }
     header {
         border-radius:0px ;
     }
+    .about-main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-paragraf{
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width:614px) {
     .fa-laptop-code {
         margin-right: 0px;
     }
-    .about-main {
-        flex-direction: column;
+    .paragraf {
         text-align: center;
+    }
+    #Home {
+        flex-direction: column;
     }
     .navbar1 {
         display: none;
     }
+    .about-paragraf{
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-paragraf1{
+        margin-right: 0px;
+    }
 }
-@media screen and (min-width: 670px) {
+
+@media screen and (min-width: 614px) {
     .navbar, .sidebar{
         display: none;
     }
